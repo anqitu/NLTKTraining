@@ -4,7 +4,7 @@
 
 import nltk
 
-# Step 1: Load Data 
+# Step 1: Load Data
 from nltk.corpus import movie_reviews
 documents = [(list(movie_reviews.words(fileid)), category)
              for category in movie_reviews.categories()
@@ -27,7 +27,7 @@ def feature_extractor(review):
         features[w] = (w in words)
 
     return features
-    
+
 featureset = [(feature_extractor(review), sentiment) for (review, sentiment) in documents]
 
 

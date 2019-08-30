@@ -16,7 +16,7 @@ def feature_extractor(name):
 	return {'last_letter': name[-1]}
 
 featureset = [(feature_extractor(name), gender) for (name, gender) in labeled_names]
-#print(featuresets[:10])
+#print(featureset[:10])
 
 # Step 3: Split the feature set to training/testing datasets
 
@@ -29,4 +29,3 @@ classifier = nltk.NaiveBayesClassifier.train(train_set)
 # Step 6: Prediction/Evaluation
 print(classifier.classify(feature_extractor('Neo')))
 print(nltk.classify.accuracy(classifier, test_set))
-

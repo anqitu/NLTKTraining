@@ -22,4 +22,3 @@ words = [word.lower() for word in text if is_ok(word)]
 distr = nltk.FreqDist(words)
 print(distr.most_common(5))
 print(distr["stone"])
-
