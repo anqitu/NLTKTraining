@@ -1,2 +1,6 @@
 GoogleNews*
 exercises/.ipynb_checkpoints/
+
+*.pdf
+
+*.zip
